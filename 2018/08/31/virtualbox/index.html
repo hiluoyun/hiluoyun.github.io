@@ -5,19 +5,20 @@
   
 
   
-  <title>Archives: 2018 | 轩曦</title>
+  <title>解决virtualbox设置VM桥接模式没有ip问题 | 轩曦</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录生活，分享快乐">
+  <meta name="description" content="启动虚拟机没有为什么IP？ dhcp需要一点时间的，centos7默认会配置ip的，只需等待一会，  手动设置ip ip addr add 10.100.100.7/24 dev eth0 ip route add default via 10.100.100.254 dev eth0  如果没有ip命令，先用NAT网络模式联网，yum install net-tools">
 <meta name="keywords" content="IT 互联网 java saltstack network">
-<meta property="og:type" content="website">
-<meta property="og:title" content="轩曦">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决virtualbox设置VM桥接模式没有ip问题">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/virtualbox/index.html">
 <meta property="og:site_name" content="轩曦">
-<meta property="og:description" content="记录生活，分享快乐">
+<meta property="og:description" content="启动虚拟机没有为什么IP？ dhcp需要一点时间的，centos7默认会配置ip的，只需等待一会，  手动设置ip ip addr add 10.100.100.7/24 dev eth0 ip route add default via 10.100.100.254 dev eth0  如果没有ip命令，先用NAT网络模式联网，yum install net-tools">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-31T10:09:02.656Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="轩曦">
-<meta name="twitter:description" content="记录生活，分享快乐">
+<meta name="twitter:title" content="解决virtualbox设置VM桥接模式没有ip问题">
+<meta name="twitter:description" content="启动虚拟机没有为什么IP？ dhcp需要一点时间的，centos7默认会配置ip的，只需等待一会，  手动设置ip ip addr add 10.100.100.7/24 dev eth0 ip route add default via 10.100.100.254 dev eth0  如果没有ip命令，先用NAT网络模式联网，yum install net-tools">
   
     <link rel="alternate" href="/atom.xml" title="轩曦" type="application/atom+xml">
   
@@ -68,59 +69,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/31/virtualbox/" class="archive-article-date">
-  <time datetime="2018-08-31T07:33:39.000Z" itemprop="datePublished">Aug 31</time>
+        <section id="main"><article id="post-virtualbox" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/31/virtualbox/" class="article-date">
+  <time datetime="2018-08-31T07:33:39.000Z" itemprop="datePublished">2018-08-31</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/virtualbox/">解决virtualbox设置VM桥接模式没有ip问题</a>
+    <h1 class="article-title" itemprop="name">
+      解决virtualbox设置VM桥接模式没有ip问题
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/24/hello-world/" class="archive-article-date">
-  <time datetime="2018-08-24T08:49:22.811Z" itemprop="datePublished">Aug 24</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/24/hello-world/">Hello World</a>
-    </h1>
-  
+        <h3 id="启动虚拟机没有为什么IP？"><a href="#启动虚拟机没有为什么IP？" class="headerlink" title="启动虚拟机没有为什么IP？"></a>启动虚拟机没有为什么IP？</h3><ul>
+<li>dhcp需要一点时间的，centos7默认会配置ip的，只需等待一会，</li>
+</ul>
+<h3 id="手动设置ip"><a href="#手动设置ip" class="headerlink" title="手动设置ip"></a>手动设置ip</h3><ol>
+<li>ip addr add 10.100.100.7/24 dev eth0</li>
+<li>ip route add default via 10.100.100.254 dev eth0<blockquote>
+<p> 如果没有ip命令，先用NAT网络模式联网，yum install net-tools</p>
+</blockquote>
+</li>
+</ol>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/31/virtualbox/" data-id="cjlhu68f000001ku0xps8pgys" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
