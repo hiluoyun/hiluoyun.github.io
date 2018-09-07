@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[解决virtualbox设置VM桥接模式没有ip问题]]></title>
+    <url>%2F2018%2F08%2F31%2Fvirtualbox%2F</url>
+    <content type="text"><![CDATA[启动虚拟机没有为什么IP？ DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间 手动设置 设置ip ip addr add 10.100.100.7/24 dev eth0 如果没有ip命令，先用NAT网络模式联网，然后安装 yum install net-tools 设置路由网关 ip route add default via 10.100.100.254 dev eth0 如果不知道路由可以先在本地物理机查看 设置DNS vi /etc/resolv.conf, 添加 nameserver 114.114.114.114 测试网络1ping www.baidu.com]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+        <tag>ip</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[轩曦]]></title>
+    <url>%2F2018%2F08%2F24%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[欢迎来到轩曦的个人博客，在这里分享技术，分享生活！快乐时光马上就要来临了！ 关于我生于太祖之地，学于天府之国，从事过云桌面开发，现就职于容器云公司。一个有趣、有理想的杭漂，偶尔也会流露自己中二的文艺气息！ 想找我Email: hiluo731@gmail.com]]></content>
+  </entry>
+</search>
