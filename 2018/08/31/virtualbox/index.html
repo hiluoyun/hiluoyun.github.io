@@ -104,7 +104,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/virtualbox_0.png">
 <meta property="og:image" content="http://yoursite.com/images/virtualbox_1.png">
-<meta property="og:updated_time" content="2018-09-07T02:01:54.203Z">
+<meta property="og:image" content="http://yoursite.com/images/virtualbox_2.png">
+<meta property="og:updated_time" content="2018-09-07T08:08:30.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决virtualbox设置VM桥接模式没有ip问题">
 <meta name="twitter:description" content="启动虚拟机没有为什么IP？ DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置 设置ip   ip addr add 10.100.100.7/24 dev eth0  如果没有ip命令，先用NAT网络模式联网，然后安装 yum install net-tools     设置路由网关   ip route add default via 10.100.1">
@@ -360,6 +361,11 @@
 <ul>
 <li>vi /etc/resolv.conf, 添加 nameserver 114.114.114.114<br><img src="/images/virtualbox_1.png" alt="dns"></li>
 </ul>
+<ol start="4">
+<li>测试网络<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="/images/virtualbox_2.png" alt="ping"></p>
 
       
     </div>
