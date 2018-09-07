@@ -94,20 +94,21 @@
 
 
 
-<meta name="description" content="启动虚拟机没有为什么IP？ dhcp需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置ip ip addr add 10.100.100.7/24 dev eth0 ip route add default via 10.100.100.254 dev eth0  如果没有ip命令，先用NAT网络模式联网，yum install net-tools">
+<meta name="description" content="启动虚拟机没有为什么IP？ DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置 设置ip   ip addr add 10.100.100.7/24 dev eth0  如果没有ip命令，先用NAT网络模式联网，然后安装 yum install net-tools     设置路由网关   ip route add default via 10.100.1">
 <meta name="keywords" content="IT 互联网 java saltstack network">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决virtualbox设置VM桥接模式没有ip问题">
 <meta property="og:url" content="http://yoursite.com/2018/08/31/virtualbox/index.html">
 <meta property="og:site_name" content="轩曦">
-<meta property="og:description" content="启动虚拟机没有为什么IP？ dhcp需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置ip ip addr add 10.100.100.7/24 dev eth0 ip route add default via 10.100.100.254 dev eth0  如果没有ip命令，先用NAT网络模式联网，yum install net-tools">
+<meta property="og:description" content="启动虚拟机没有为什么IP？ DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置 设置ip   ip addr add 10.100.100.7/24 dev eth0  如果没有ip命令，先用NAT网络模式联网，然后安装 yum install net-tools     设置路由网关   ip route add default via 10.100.1">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/34.png">
-<meta property="og:updated_time" content="2018-09-06T12:21:54.004Z">
+<meta property="og:image" content="http://yoursite.com/images/virtualbox_0.png">
+<meta property="og:image" content="http://yoursite.com/images/virtualbox_1.png">
+<meta property="og:updated_time" content="2018-09-07T02:01:54.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决virtualbox设置VM桥接模式没有ip问题">
-<meta name="twitter:description" content="启动虚拟机没有为什么IP？ dhcp需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置ip ip addr add 10.100.100.7/24 dev eth0 ip route add default via 10.100.100.254 dev eth0  如果没有ip命令，先用NAT网络模式联网，yum install net-tools">
-<meta name="twitter:image" content="http://yoursite.com/images/34.png">
+<meta name="twitter:description" content="启动虚拟机没有为什么IP？ DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间  手动设置 设置ip   ip addr add 10.100.100.7/24 dev eth0  如果没有ip命令，先用NAT网络模式联网，然后安装 yum install net-tools     设置路由网关   ip route add default via 10.100.1">
+<meta name="twitter:image" content="http://yoursite.com/images/virtualbox_0.png">
 
 
 
@@ -333,15 +334,32 @@
 
       
         <h3 id="启动虚拟机没有为什么IP？"><a href="#启动虚拟机没有为什么IP？" class="headerlink" title="启动虚拟机没有为什么IP？"></a>启动虚拟机没有为什么IP？</h3><ul>
-<li>dhcp需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间<br><img src="/images/34.png" alt=""></li>
+<li>DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间<br><img src="/images/virtualbox_0.png" alt="ifconfig"></li>
 </ul>
-<h3 id="手动设置ip"><a href="#手动设置ip" class="headerlink" title="手动设置ip"></a>手动设置ip</h3><ol>
-<li>ip addr add 10.100.100.7/24 dev eth0</li>
-<li>ip route add default via 10.100.100.254 dev eth0<blockquote>
-<p> 如果没有ip命令，先用NAT网络模式联网，yum install net-tools</p>
+<h3 id="手动设置"><a href="#手动设置" class="headerlink" title="手动设置"></a>手动设置</h3><ol>
+<li>设置ip</li>
+</ol>
+<ul>
+<li>ip addr add 10.100.100.7/24 dev eth0<blockquote>
+<p> 如果没有ip命令，先用NAT网络模式联网，然后安装 <code>yum install net-tools</code></p>
 </blockquote>
 </li>
+</ul>
+<ol start="2">
+<li>设置路由网关</li>
 </ol>
+<ul>
+<li>ip route add default via 10.100.100.254 dev eth0<blockquote>
+<p>如果不知道路由可以先在本地物理机查看</p>
+</blockquote>
+</li>
+</ul>
+<ol start="3">
+<li>设置DNS</li>
+</ol>
+<ul>
+<li>vi /etc/resolv.conf, 添加 nameserver 114.114.114.114<br><img src="/images/virtualbox_1.png" alt="dns"></li>
+</ul>
 
       
     </div>
@@ -366,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/24/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/08/24/hello-world/" rel="next" title="轩曦">
+                <i class="fa fa-chevron-left"></i> 轩曦
               </a>
             
           </div>
@@ -490,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动虚拟机没有为什么IP？"><span class="nav-number">1.</span> <span class="nav-text">启动虚拟机没有为什么IP？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动设置ip"><span class="nav-number">2.</span> <span class="nav-text">手动设置ip</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动虚拟机没有为什么IP？"><span class="nav-number">1.</span> <span class="nav-text">启动虚拟机没有为什么IP？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动设置"><span class="nav-number">2.</span> <span class="nav-text">手动设置</span></a></li></ol></div>
             
 
           </div>

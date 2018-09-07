@@ -336,15 +336,32 @@
         
           
             <h3 id="启动虚拟机没有为什么IP？"><a href="#启动虚拟机没有为什么IP？" class="headerlink" title="启动虚拟机没有为什么IP？"></a>启动虚拟机没有为什么IP？</h3><ul>
-<li>dhcp需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间<br><img src="/images/34.png" alt=""></li>
+<li>DHCP需要一点时间的，centos7默认会配置ip的，需要30秒左右的等待时间<br><img src="/images/virtualbox_0.png" alt="ifconfig"></li>
 </ul>
-<h3 id="手动设置ip"><a href="#手动设置ip" class="headerlink" title="手动设置ip"></a>手动设置ip</h3><ol>
-<li>ip addr add 10.100.100.7/24 dev eth0</li>
-<li>ip route add default via 10.100.100.254 dev eth0<blockquote>
-<p> 如果没有ip命令，先用NAT网络模式联网，yum install net-tools</p>
+<h3 id="手动设置"><a href="#手动设置" class="headerlink" title="手动设置"></a>手动设置</h3><ol>
+<li>设置ip</li>
+</ol>
+<ul>
+<li>ip addr add 10.100.100.7/24 dev eth0<blockquote>
+<p> 如果没有ip命令，先用NAT网络模式联网，然后安装 <code>yum install net-tools</code></p>
 </blockquote>
 </li>
+</ul>
+<ol start="2">
+<li>设置路由网关</li>
 </ol>
+<ul>
+<li>ip route add default via 10.100.100.254 dev eth0<blockquote>
+<p>如果不知道路由可以先在本地物理机查看</p>
+</blockquote>
+</li>
+</ul>
+<ol start="3">
+<li>设置DNS</li>
+</ol>
+<ul>
+<li>vi /etc/resolv.conf, 添加 nameserver 114.114.114.114<br><img src="/images/virtualbox_1.png" alt="dns"></li>
+</ul>
 
           
         
@@ -412,7 +429,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/24/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/08/24/hello-world/" itemprop="url">轩曦</a></h1>
         
 
         <div class="post-meta">
@@ -464,15 +481,10 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>欢迎来到轩曦的个人博客，在这里分享技术，分享生活！快乐时光马上就要来临了！  </p>
+<h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p>生于先祖之地，学于天府之国，从事过云桌面开发，现就职于容器云公司。<br>一个有趣、有理想的杭漂，偶尔也会流露自己中二的文艺气息！</p>
+<hr>
+<h3 id="想找我"><a href="#想找我" class="headerlink" title="想找我"></a>想找我</h3><p>Email: <a href="mailto:hiluo731@gmail.com" target="_blank" rel="noopener">hiluo731@gmail.com</a></p>
 
           
         
